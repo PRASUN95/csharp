@@ -13,33 +13,33 @@ namespace LinqProgramCsharp
             //count file extensions
 
             #region
-            //string[] files = new string[]
-            //{
-            //    "str.txt","asd.png","ast.doc","wst.TXT","xyz.abc.pdf","aaaa.PDF","abc.xml"
-            //};
-            //var excnt = files.Select(file => Path.GetExtension(file).TrimStart('.').ToLower()).
-            //    GroupBy(x => x, (ext, extCount) => new
-            //    {
-            //        Extension = ext,
-            //        ExtCount = extCount.Count()
-            //    });
-            //foreach(var ob in excnt)
-            //{
-            //    Console.WriteLine("{0} {1}",ob.Extension,ob.ExtCount);
-            //}
+            string[] files = new string[]
+            {
+               "str.txt","asd.png","ast.doc","wst.TXT","xyz.abc.pdf","aaaa.PDF","abc.xml"
+            };
+            var excnt = files.Select(file => Path.GetExtension(file).TrimStart('.').ToLower()).
+               GroupBy(x => x, (ext, extCount) => new
+               {
+                   Extension = ext,
+                   ExtCount = extCount.Count()
+               });
+            foreach(var ob in excnt)
+            {
+               Console.WriteLine("{0} {1}",ob.Extension,ob.ExtCount);
+            }
 
-            //int[] a = new int[]
-            //{
-            //    3,4,2,4,5,6
-            //};
-            ////   Array.Sort(a, new ValueComparator());
-            //Array.Sort(a, (x, y) => x.CompareTo(y));
-            //string s = "";
-            //foreach(int el in a)
-            //{
-            //    s += el.ToString();
-            //}
-            //Console.WriteLine(s);
+            int[] a = new int[]
+            {
+               3,4,2,4,5,6
+            };
+            //   Array.Sort(a, new ValueComparator());
+            Array.Sort(a, (x, y) => x.CompareTo(y));
+            string s = "";
+            foreach(int el in a)
+            {
+               s += el.ToString();
+            }
+            Console.WriteLine(s);
             #endregion
             int[] a = new int[]
             {
